@@ -1,5 +1,5 @@
 package modele;
-//new
+
 public class Telephone {
 	private String strRegion;
 	private String strZone;
