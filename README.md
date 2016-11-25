@@ -3,9 +3,13 @@
 L’objectif final du projet consiste à développer un système logiciel de gestion pour un
 club vidéo de location de films. En raison des contraintes temporelles, on se limitera au
 développement d’une version simplifiée qui implémente principalement la logique
-d’affaires du club vidéo et qui offre des interfaces utilisateur simples. La composante
-base de données ne faisant pas partie des objectifs de ce cours, on pourra se contenter
-d’utiliser des fichiers Java ou Excel pour stocker les données relatives à la gestion au club
-vidéo. Toutefois, pour les équipes qui le voudront, il est conseillé d’utiliser le système de
-gestion de bases de données simple et pratique suivant : SQLite (http://www.sqlite.org/).
-Il s’agit d’un SGDB léger et gratuit qui s’installe très facilement sur n’importe quel PC.
+d’affaires du club vidéo et qui offre des interfaces utilisateur simples. 
+
+#Brève description du système
+
+Le club vidéo de location de films, appelé par commodité dans la suite du texte vidéoclub, dispose de films sur support DVD et Blu-ray. Les nouveautés sont louées à la journée, les autres films peuvent être loués à la journée ou à la semaine. C’est le gérant du vidéoclub qui est responsable de l’acquisition de nouveautés et qui décide quand un film n’est plus considéré comme une nouveauté. Le gérant décide aussi du nombre de copies de chaque film que le vidéoclub veut acquérir. Les employés du vidéoclub doivent alors libérer certains présentoirs pour faire de la place aux nouveautés. Les employés sont aussi en charge du rangement des films sur les présentoirs suivant une organisation thématique (films d’horreur, comédies, etc.).
+Le vidéoclub propose aussi à la vente, du popcorn et des bonbons, ainsi que des films déjà visionnés dont on veut se débarrasser pour libérer de l’espace.
+Ce vidéoclub ne loue pas de jeux vidéo ni de consoles de jeux ou de visionnement.
+N’importe qui peut acheter les produits proposés à la vente, mais seuls les membres du vidéoclub peuvent louer des films. Il n’y a pas de frais pour devenir membre, mais il faut fournir une empreinte d’une carte de crédit valide ainsi que son adresse et son numéro de téléphone. Chaque client dispose alors d’un code secret qui, combiné à son numéro de téléphone, permet son identification et son authentification.
+Lorsqu’un film n’est pas retourné dans les délais, l’emprunteur se voit imposer une amende égale au montant de la location et ce par période de location entière (jour ou semaine). Par exemple, un client qui retournerait, avec 3 jours de retard, un film loué à la semaine, se verrait facturé pour toute une semaine additionnelle. Lorsque le retard excède 2 jours pour une nouveauté, 5 jours pour un film régulier loué à la journée et 2 semaines pour un film régulier loué à la semaine, un employé du vidéoclub téléphone au client pour faire un premier rappel. Un deuxième et dernier rappel est fait avec la même périodicité. Un film non retourné après 10 jours de retard pour une nouveauté et 60 jours pour un film régulier, est considéré comme perdu et le prix du film, plus taxes, plus 20$ (pour compenser le manque à gagner du vidéoclub) est chargé sur la carte de crédit de l’emprunteur.
+Le système logiciel projeté doit permettre le fonctionnement habituel attendu d’un tel commerce. Pour toute autre information non fournie mais pertinente (coût de location, etc.), vous êtes libres de faire un certain nombre d’hypothèses raisonnables que vous devez clairement mentionner dans votre livrable final.
